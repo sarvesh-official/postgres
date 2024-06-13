@@ -51,9 +51,8 @@ async function getDetailsByEmail() {
     }
   } catch (err) {
     console.log(err);
+  } finally {
+    await client.end();
   }
-  //   finally {
-  //     await client.end();
-  //   }
 }
 getDetailsByEmail();
